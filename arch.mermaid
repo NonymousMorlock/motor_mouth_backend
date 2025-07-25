@@ -1,0 +1,8 @@
+graph TD
+A[Input Text] --> B{Is valid SSML?}
+B -->|Yes| C[Use directly]
+B -->|No| D[Convert to SSML]
+D --> E[Add sentence pauses]
+E --> F[Wrap in speak tags]
+C --> G[Synthesize]
+F --> G
